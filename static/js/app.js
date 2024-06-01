@@ -70,10 +70,6 @@ function buildCharts(sampleId) {
     Plotly.newPlot('bubble', bubbleData, layout);
 
     // For the Bar Chart, map the otu_ids to a list of strings for your yticks
-    
-    // Build a Bar Chart
-    // Don't forget to slice and reverse the input data appropriately
-
     let barData = [];
 
     for (let i = 0; i < otuIds.length; i++) {
@@ -82,9 +78,11 @@ function buildCharts(sampleId) {
         y: otuIds[i]
       });
     }
-
+    
+    // Build a Bar Chart
+    // Don't forget to slice and reverse the input data appropriately
     barData = barData.sort((a, b) => b.x - a.x).slice(0, 10).reverse();
-
+    
     barData = [{
       x: barData.map(a => a.x),
       y: barData.map(a => "OTU " + a.y),
