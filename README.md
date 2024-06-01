@@ -4,7 +4,7 @@ From Module 14: Interactive Visualisations from the Data Analytics Boot Camp by 
 
 By implementing skills learnt throughout the module, an attempt at the challenge has been submitted here.
 
-Deployed to GitHub Pages [here](soljm.github.io/belly-button-challenge/)
+Deployed to GitHub Pages [here](https://soljm.github.io/belly-button-challenge/).
 
 ## Contents
 
