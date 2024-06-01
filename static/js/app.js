@@ -38,7 +38,7 @@ function buildCharts(sampleId) {
     let sampleValues = sample.sample_values;
 
     // Build a Bubble Chart
-    let trace1 = {
+    let bubbleData = [{
       x: otuIds,
       y: sampleValues,
       text: otuLabels,
@@ -47,9 +47,7 @@ function buildCharts(sampleId) {
         size: sampleValues,
         color: otuIds
       }
-    };
-    
-    let bubbleData = [trace1];
+    }];
     
     let layout = {
       title: 'Bacteria Cultures Per Sample',
@@ -91,8 +89,10 @@ function buildCharts(sampleId) {
       x: barData.map(a => a.x),
       y: barData.map(a => "OTU " + a.y),
       type: 'bar',
-      orientation: 'h'
-    }]
+      orientation: 'h',
+      marker: {
+        color: 'rgb(123, 170, 216)'
+    }}];
 
     barLayout = {
       title: 'Top 10 Bacteria Cultures Found',
